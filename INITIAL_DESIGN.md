@@ -9,10 +9,25 @@
  - database for all task requirements
 
 
-# Public Task Mutation API
-  
-  - POST /v1/task { ... }
+# Public Task API
 
-# Private Container API
+For now lets limit the scope of tasks to consumers who have the task id
 
-  - 
+GET /v1/task/:id/
+RESPONSE
+```
+{
+  id: '',
+  status: '',
+  links: {
+    self: { href: '...' }
+  },
+
+  artifacts: {
+    log: {
+      status: 'complete',
+      url: '...'
+    },
+  }
+}
+```
